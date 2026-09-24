@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f0f14" />
+  <title>ÉLAN — Transformer l'inspiration en action</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- En-tête -->
+    <header id="topbar">
+      <div class="brand">
+        <span class="logo">🔥</span>
+        <span class="brand-name">ÉLAN</span>
+      </div>
+      <button id="homeBtn" title="Écran principal">🏠</button>
+    </header>
+
+    <!-- Écran principal (§40) -->
+    <section id="homeScreen" class="screen hidden">
+      <div class="home-card">
+        <div class="greeting" id="homeGreeting">Bonjour 👋</div>
+        <div class="streak" id="homeStreak">🔥 0 jour</div>
+
+        <div class="cap-block">
+          <div class="label">TON CAP</div>
+          <div class="cap" id="homeCap">—</div>
+        </div>
+
+        <div class="today-block">
+          <div class="label">AUJOURD'HUI</div>
+          <div class="mission" id="homeMission">Aucune mission pour l'instant</div>
+          <button id="startMissionBtn" class="primary hidden">COMMENCER</button>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-value" id="homeMinutes">0 min</div>
+            <div class="stat-label">📚 cette semaine</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="homeActions">0</div>
+            <div class="stat-label">🏆 actions réalisées</div>
+          </div>
+        </div>
+
+        <div class="badges" id="homeBadges"></div>
+      </div>
+    </section>
+
+    <!-- Chat -->
+    <section id="chatScreen" class="screen">
+      <div id="messages"></div>
+      <div id="quickReplies"></div>
+      <form id="composer">
+        <input id="input" type="text" placeholder="Écris ta réponse…" autocomplete="off" />
+        <button type="submit" id="sendBtn">➤</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "elan-mvp",
+  "version": "1.0.0",
+  "description": "ÉLAN — Compagnon intelligent de croissance personnelle et professionnelle (MVP Alpha)",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js"
+  },
+  "keywords": [
+    "elan",
+    "coaching",
+    "mvp",
+    "africa"
+  ],
+  "author": "Aron Prince J. Vodounon",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.21.0"
+  }
+}
