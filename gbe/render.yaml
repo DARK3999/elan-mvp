@@ -1,0 +1,14 @@
+# Déploiement GBÈ sur Render (plan gratuit).
+# Sur https://render.com : New → Blueprint → pointer sur ce dépôt.
+# Voir gbe/DEPLOY.md pour les détails et les limites du plan gratuit.
+services:
+  - type: web
+    name: gbe
+    runtime: node
+    plan: free
+    rootDir: gbe
+    buildCommand: ""
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: "22"

@@ -1,0 +1,25 @@
+{
+  "_comment": "Gabarit TWA pour PWABuilder / Bubblewrap. Remplace host et startUrl par ton URL publique (voir PLAYSTORE.md). Les valeurs définitives (signingKey, etc.) sont générées par PWABuilder.",
+  "packageId": "bj.gbe.app",
+  "host": "TON-URL-PUBLIQUE.onrender.com",
+  "name": "GBÈ",
+  "launcherName": "GBÈ",
+  "display": "standalone",
+  "orientation": "portrait",
+  "themeColor": "#075f2c",
+  "themeColorDark": "#0d1512",
+  "backgroundColor": "#f3f6f1",
+  "navigationColor": "#075f2c",
+  "startUrl": "/",
+  "iconUrl": "https://TON-URL-PUBLIQUE.onrender.com/icon.svg",
+  "maskableIconUrl": "https://TON-URL-PUBLIQUE.onrender.com/icon.svg",
+  "appVersionName": "0.1.0",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "fallbackType": "customtabs",
+  "enableNotifications": true,
+  "features": {},
+  "signing": {
+    "_comment": "PWABuilder génère la clé de signature et l'empreinte SHA-256 à mettre dans public/.well-known/assetlinks.json"
+  }
+}
