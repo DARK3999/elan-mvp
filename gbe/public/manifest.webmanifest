@@ -1,20 +1,15 @@
 {
-  "name": "GBÈ — Réseau d'urgence",
+  "name": "GBÈ — Alerte citoyenne",
   "short_name": "GBÈ",
-  "description": "Réseau d'urgence solidaire, pensé pour fonctionner même quand le réseau faiblit. Made in Bénin.",
+  "description": "Messagerie d'alerte et de signalement anonyme, pensée pour tout le monde. Made in Bénin.",
   "lang": "fr",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#f5f8f4",
-  "theme_color": "#0a7d3a",
+  "background_color": "#eef3ec",
+  "theme_color": "#075f2c",
   "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
   ]
 }

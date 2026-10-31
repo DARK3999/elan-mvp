@@ -1,4 +1,5 @@
 node_modules/
 data/feed.json
+data/audio/
 *.log
 .DS_Store
