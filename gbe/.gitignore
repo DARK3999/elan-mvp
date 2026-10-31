@@ -1,0 +1,4 @@
+node_modules/
+data/feed.json
+*.log
+.DS_Store

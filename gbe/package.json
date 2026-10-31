@@ -1,0 +1,21 @@
+{
+  "name": "gbe",
+  "version": "0.1.0",
+  "description": "GBÈ — Réseau d'urgence solidaire hors-ligne, Made in Bénin (MVP PWA)",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "urgence",
+    "offline",
+    "pwa",
+    "benin",
+    "mesh",
+    "entraide"
+  ],
+  "author": "Aron Prince J. Vodounon",
+  "license": "MIT"
+}

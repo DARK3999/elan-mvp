@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a7d3a" />
+  <title>GBÈ — Réseau d'urgence</title>
+  <meta name="description" content="GBÈ — réseau d'urgence solidaire, pensé pour fonctionner même quand le réseau faiblit. Made in Bénin." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Bandeau état réseau -->
+  <div id="net-banner" class="net-banner" hidden></div>
+
+  <header class="app-header">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">🛟</span>
+      <div>
+        <h1>GBÈ</h1>
+        <p class="tagline">Garder la voix connectée · 🇧🇯</p>
+      </div>
+    </div>
+    <button id="profile-btn" class="icon-btn" title="Mon profil" aria-label="Mon profil">👤</button>
+  </header>
+
+  <!-- Onboarding (si pas de profil) -->
+  <dialog id="onboarding">
+    <form method="dialog" id="onboarding-form">
+      <h2>Bienvenue 👋</h2>
+      <p class="muted">Pas de formulaire interminable. Juste un pseudo et ton quartier,
+        pour que les secours et tes voisins sachent qui parle et où.</p>
+      <label>Ton pseudo
+        <input id="ob-pseudo" maxlength="40" placeholder="Ex : Aron, Mamiwata…" required />
+      </label>
+      <label>Ton quartier / zone
+        <input id="ob-zone" maxlength="60" placeholder="Ex : Cotonou · Fidjrossè" required />
+      </label>
+      <button class="btn-primary" value="ok">Entrer</button>
+      <p class="fineprint">Tout reste sur ton téléphone. Rien n'est partagé tant que tu ne publies pas.</p>
+    </form>
+  </dialog>
+
+  <!-- Profil -->
+  <dialog id="profile-dialog">
+    <form method="dialog" id="profile-form">
+      <h2>Mon profil</h2>
+      <label>Pseudo
+        <input id="pf-pseudo" maxlength="40" required />
+      </label>
+      <label>Quartier / zone
+        <input id="pf-zone" maxlength="60" required />
+      </label>
+      <div class="row">
+        <button class="btn-ghost" value="cancel" formnovalidate>Fermer</button>
+        <button class="btn-primary" value="ok">Enregistrer</button>
+      </div>
+    </form>
+  </dialog>
+
+  <main class="app-main">
+    <!-- Composer une alerte / un message -->
+    <section class="composer" aria-label="Lancer une alerte">
+      <div class="type-chips" id="type-chips" role="group" aria-label="Type d'alerte">
+        <button class="chip" data-type="inondation">🌊 Inondation</button>
+        <button class="chip" data-type="incendie">🔥 Incendie</button>
+        <button class="chip" data-type="secours">🚑 Secours</button>
+        <button class="chip" data-type="securite">🛡️ Sécurité</button>
+        <button class="chip" data-type="info">💬 Info</button>
+        <button class="chip" data-type="ok">✅ Je vais bien</button>
+      </div>
+      <textarea id="msg" maxlength="500" rows="2"
+        placeholder="Décris la situation : où, quoi, qui a besoin d'aide…"></textarea>
+      <div class="composer-actions">
+        <span class="zone-tag" id="zone-tag"></span>
+        <button id="send-btn" class="btn-primary">Publier</button>
+      </div>
+    </section>
+
+    <!-- Bouton SOS rapide -->
+    <button id="sos-btn" class="sos" aria-label="Lancer un SOS secours">
+      <span class="sos-dot"></span> SOS — besoin de secours
+    </button>
+
+    <!-- Fil communautaire -->
+    <section class="feed" aria-label="Fil des alertes">
+      <div class="feed-head">
+        <h2>Fil de la communauté</h2>
+        <button id="refresh-btn" class="btn-ghost small">↻ Actualiser</button>
+      </div>
+      <ul id="feed-list" class="feed-list"></ul>
+      <p id="feed-empty" class="muted empty">Aucune alerte pour l'instant. Reste prudent·e 💚</p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p><strong>GBÈ</strong> — MVP. Fonctionne hors-ligne : tes publications sont gardées et
+      envoyées dès que le réseau revient.</p>
+    <p class="muted small">Phase 2 : relais direct téléphone-à-téléphone (Bluetooth) sans aucun internet.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
